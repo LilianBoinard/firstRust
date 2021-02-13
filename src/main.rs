@@ -1,7 +1,7 @@
 use std::process::Command;
 
 fn main() {
-    let mut good_ping = vec![];
+    let mut good_ping = Vec::new();
     for i in 1..=254 {
         let address = format!("192.168.0.{}", i);
         let command = format!("ping -c1 {} -W1", address);
